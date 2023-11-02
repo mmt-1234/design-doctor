@@ -32,7 +32,7 @@ def index():
       db.session.commit()
 
       return f'Uploaded: {file.filename}'
-   return render_template('input.html')
+   return render_template('index.html')
 
 @app.route('/download/<upload_id>')
 def download(upload_id):
