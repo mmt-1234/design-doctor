@@ -1,6 +1,7 @@
 const imginput=document.querySelector('#file-input');
 const imgbutt=document.querySelector('.upload-file');
 const imagepre=document.querySelector('#img-preview');
+const submit=document.querySelector('#submit');
 const uploadFile=[];
 const FileURl=[];
 
@@ -37,7 +38,6 @@ function getImageInput(e){
         alert('이미지는 10개까지만 입력가능합니다');
         return;
     }
-    var num=0;
     [...files].forEach(file => {
         if(!file.type.match("image/.*")){
             alert('이미지 파일만 업로드가 가능합니다');
@@ -55,5 +55,6 @@ function getImageInput(e){
 }
 imgbutt.addEventListener('click',()=>{
     imginput.click();
+    submit.click();
 });
-imginput.addEventListener('change',getImageInput);
+// imginput.addEventListener('change',getImageInput);
